@@ -1,0 +1,13 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  padding: 1rem;
+  background: #254e7b;
+  color: #fff;
+  text-align: center;
+}
+main {
+  text-align: center;
+}

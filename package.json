@@ -1,0 +1,15 @@
+{
+  "name": "zapmeasure",
+  "version": "1.0.0",
+  "description": "Zappos.com tool to measure feet",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "underGhost",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

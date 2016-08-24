@@ -17,11 +17,12 @@ main {
 #footMeasurements {
   position: relative;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 75px;
 }
 #footMeasurements input[type=text] {
   font-size: 30px;
   position: absolute;
+  background: transparent;
 }
 #footMeasurements .leftLength, #footMeasurements .rightLength {
   top: 50%;

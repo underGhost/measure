@@ -21,8 +21,8 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
 	img = frame.array
 	v = np.median(img)
 	imgray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-	imgray = cv2.GaussianBlur(imgray, (5, 5), 0)
-	high_thresh, thresh = cv2.threshold(imgray, 40, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+	imgray = cv2.GaussianBlur(imgray, (41, 41), 0)
+	high_thresh, thresh = cv2.threshold(imgray, 75, 200, cv2.THRESH_BINARY_INV)
 	thresh = cv2.dilate(thresh, None, iterations=2)
 	lower = max(0, (1.0 - sigma) * v)
 	upper = min(255, (1.0 + sigma) * v)
@@ -36,8 +36,8 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
 		box = np.int0(box)
 		cv2.drawContours(img, [box], 0, (0, 255, 0), 3)
 		print("{0}x{1}".format(w, h))
-		#cv2.imwrite('demo.jpg', img)
+		cv2.imwrite('demo.jpg', img)
 	rawCapture.truncate(0)
-	cv2.imshow('demo', img)
-	if(cv2.waitKey(1) & 0xFF == ord('q')):
-		break
+	#cv2.imshow('demo', img)
+	#if(cv2.waitKey(1) & 0xFF == ord('q')):
+	break

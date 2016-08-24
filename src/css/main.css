@@ -2,6 +2,9 @@ html, body {
   margin: 0;
   padding: 0;
 }
+input {
+  border: none;
+}
 header {
   padding: 1rem;
   background: #254e7b;
@@ -10,4 +13,27 @@ header {
 }
 main {
   text-align: center;
+}
+#footMeasurements {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#footMeasurements input[type=text] {
+  font-size: 30px;
+  position: absolute;
+}
+#footMeasurements .leftLength, #footMeasurements .rightLength {
+  top: 50%;
+  left: 10px;
+}
+#footMeasurements .rightLength {
+  left: auto;
+  right: 10px;
+}
+#footMeasurements .leftWidth, #footMeasurements .rightWidth {
+  bottom: -40px;
+}
+#footMeasurements .rightWidth {
+  right: 110px;
 }

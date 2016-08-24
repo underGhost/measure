@@ -35,8 +35,9 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
 		box = cv2.cv.BoxPoints(rect)
 		box = np.int0(box)
 		cv2.drawContours(img, [box], 0, (0, 255, 0), 3)
-		print("{0}x{1}".format(w, h))
 		cv2.imwrite('demo.jpg', img)
+        print(w + 2)
+        print(h + 2)
 	rawCapture.truncate(0)
 	#cv2.imshow('demo', img)
 	#if(cv2.waitKey(1) & 0xFF == ord('q')):

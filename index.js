@@ -17,18 +17,17 @@ app.get('/', function (req, res) {
 app.get('/getShoeSize', function(req, res) {
   var footDimensions = {};
   execute("python testImg.py", function(response){
-    console.log(response);
       response.split('\n').map(function(v, i) {
         if(v && v !== 'Cleaned up camera.') {
           footDimensions[i] = v;
         }
       });
-      console.log(footDimensions);
+      //console.log(footDimensions);
       res.setHeader('Content-Type', 'application/json');
       res.send(JSON.stringify(footDimensions));
   });
 });
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('App Running at http://localhost:3000');
 });

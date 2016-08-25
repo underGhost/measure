@@ -5,28 +5,31 @@
       <link href="css/main.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-      <header>Z-Measure</header>
+      <header>
+        <h1>Z-Measure</h1>
+      </header>
       <main>
         <section class="intro">
-          <p>This is a simple to use foot measuring device. People don't have to measure by hand and it's incredibly accurate.</p>
-          <form>
+          <p>This is a simple, hands free, foot measuring device.</p>
+          <form id="customerInfo">
             <label>Gender</label>
             <select name="gender">
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
             <label>Age:</label>
-            <input type="number" name="age"></input>
+            <input type="text" maxlength="2" name="age"></input>
           </form>
           <div id="footMeasurements">
             <input type="text" class="leftFoot leftLength" disabled size="3" />
             <input type="text" class="leftFoot leftWidth" disabled size="3" />
-            <img src="images/foot_silhouette.png" alt="foot silhouette"/>
+            <img src="images/foot_silhouette2.png" alt="foot silhouette"/>
             <input type="text" class="rightFoot rightLength" disabled size="3" />
             <input type="text" class="rightFoot rightWidth" disabled size="3" />
           </div>
         </section>
         <button id="getSize">Get Size</button>
+        <div id="shoeSize"></div>
       </main>
       <script src="js/app.js"></script>
     </body>
